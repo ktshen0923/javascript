@@ -10,6 +10,7 @@
      <link rel="stylesheet" type='text/css' media='all' href="css/colors.css"> 
     <!-- Optional - CSS SVG Icons (Font Awesome) -->
      <link rel="stylesheet" type='text/css' media='all' href="css/svg-icons.css"> 
+	 <div style="text-align:center;"><h1><a href="https://my.flightradar24.com/"><img src="http://banners-my.fr24.com/ss910191ss.png" alt="My Flightdiary.net profile" /></a><a href="https://my.flightradar24.com/"><img src="http://banners-my.fr24.com/ss910191ss-future.png" alt="My Flightdiary.net profile" /></a></h1></div>
 
 
 </head>				<!-- 這是head結束的tag -->
@@ -20,17 +21,19 @@
 <!-- 下面是選項的語法 -->
 <div class="wrap  fadeInUp" id="sec1">
 	<div class="content-left">
-		<input type="radio" name="option" value="跑步" checked>跑步<br>
+		<input type="radio" name="option" value="飛機" checked>飛機<br>
+		<input type="radio" name="option" value="跑步">跑步<br>
 		<input type="radio" name="option" value="鐵軌">鐵軌<br>
 		<input type="radio" name="option" value="山巔">山巔<br>
 		<select name="test" class="opts" id="myselect">
 		  <option selected value=1>舒宇宸</option>
 		  <option value=2>劉之中</option>
 		  <option value=3>李昱勳</option>
+          <option value=4>沈冠廷</option>		
 		</select>
-		名言一:<input id="quote_input1" value="數學建模教育之道無它, 唯數學與榜樣"> <br>
-		名言二:<input id="quote_input2" value="Mathematical Modeling is nothing, but Mathematics and Model!"> <br>
-		名言三:<input id="quote_input3" value="舒大ㄅ土, me"> <br>
+		中文名言:<input id="quote_input1" value="你好"> <br>
+		英文名言:<input id="quote_input2" value="Hello!"> <br>
+		中文名字,英文名字:<input id="quote_input3" value="沈冠廷,KTS"> <br>
 		<button type="button" id="mybutton" onclick=showopt()>產生名言</button>	<!-- 按了之後要執行showopt() -->
 	</div>
 </div>
@@ -107,7 +110,9 @@ function showopt() {
 		document.getElementById("teacher").style = "background-image:url('images/ccliu.png'); z-index:5;";
 	} else if (teacher_no == 3) {
 		document.getElementById("teacher").style = "background-image:url('images/andylee.png'); z-index:5;";
-	}
+	} else if (teacher_no == 4) {
+		document.getElementById("teacher").style = "background-image:url('images/ktshen.png'); z-index:5;";
+	} 
 	
 	var y = document.getElementsByName("option");
 	for(var i=0; i<y.length; ++i) {
@@ -117,9 +122,11 @@ function showopt() {
 				document.getElementById("bgimage").style = "background-image:url('images/road-2.jpg');";
 			} else if(i==2) {
 				document.getElementById("bgimage").style = "background-image:url('images/road-3.jpg');";
-			} else {
+			} else if(i==3){
 				document.getElementById("bgimage").style = "background-image:url('images/road-dawn-mountains-sky.jpeg');";
-			}
+			} else{
+				document.getElementById("bgimage").style = "background-image:url('images/350.jpg');";
+			}             
 		}
 	}
 	$( "#sec1" ).hide();
